@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+    <ex.ss.lib.base.view.ImmersiveStatusBarHolder
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_register_close"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginHorizontal="32dp"
+        android:src="@drawable/register_close"
+        app:layout_constraintBottom_toBottomOf="@id/iv_register_service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_register_service" />
+
+    <ImageView
+        android:id="@+id/iv_register_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/login_service"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status_bar" />
+
+    <TextView
+        android:id="@+id/tv_register_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="27dp"
+        android:text="@string/register_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_28"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_register_service" />
+
+    <ex.ss.lib.components.view.CardConstraintLayout
+        android:id="@+id/layout_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="@color/color_363a3e"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        app:contentPaddingBottom="32dp"
+        app:contentPaddingLeft="24dp"
+        app:contentPaddingRight="24dp"
+        app:contentPaddingTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_register_hello">
+
+        <EditText
+            android:id="@+id/et_input_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_login_input"
+            android:hint="邮箱"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="19dp"
+            android:paddingVertical="14dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_66ffffff"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_input_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_login_input"
+            android:hint="验证码"
+            android:inputType="textEmailAddress"
+            android:paddingVertical="14dp"
+            android:paddingStart="19dp"
+            android:paddingEnd="60dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_66ffffff"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_input_account" />
+
+        <TextView
+            android:id="@+id/tv_code_get"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:text="@string/login_code_get"
+            android:textColor="@color/color_ff19c179"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintBottom_toBottomOf="@id/et_input_code"
+            app:layout_constraintEnd_toEndOf="@id/et_input_code"
+            app:layout_constraintTop_toTopOf="@id/et_input_code" />
+
+        <EditText
+            android:id="@+id/et_input_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_login_input"
+            android:hint="密码"
+            android:inputType="textEmailAddress"
+            android:paddingVertical="14dp"
+            android:paddingStart="19dp"
+            android:paddingEnd="60dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_66ffffff"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_input_code" />
+
+        <ImageView
+            android:id="@+id/iv_pwd_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:src="@drawable/input_pwd_eye"
+            app:layout_constraintBottom_toBottomOf="@id/et_input_pwd"
+            app:layout_constraintEnd_toEndOf="@id/et_input_pwd"
+            app:layout_constraintTop_toTopOf="@id/et_input_pwd" />
+
+        <EditText
+            android:id="@+id/et_input_confirm_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_login_input"
+            android:hint="确认密码"
+            android:inputType="textEmailAddress"
+            android:paddingVertical="14dp"
+            android:paddingStart="19dp"
+            android:paddingEnd="60dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_66ffffff"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_input_pwd" />
+
+
+        <ImageView
+            android:id="@+id/iv_confirm_pwd_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:src="@drawable/input_pwd_eye"
+            app:layout_constraintBottom_toBottomOf="@id/et_input_confirm_pwd"
+            app:layout_constraintEnd_toEndOf="@id/et_input_confirm_pwd"
+            app:layout_constraintTop_toTopOf="@id/et_input_confirm_pwd" />
+
+        <EditText
+            android:id="@+id/et_input_invite_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_login_input"
+            android:hint="邀请码（选填）"
+            android:inputType="textEmailAddress"
+            android:paddingVertical="14dp"
+            android:paddingStart="19dp"
+            android:paddingEnd="60dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_66ffffff"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_input_confirm_pwd" />
+
+    </ex.ss.lib.components.view.CardConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_fill_button"
+        android:gravity="center"
+        android:text="@string/register"
+        android:textColor="@color/button_text_color"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_input" />
+
+    <TextView
+        android:id="@+id/tv_register_proto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/register_proto"
+        android:textColor="@color/color_ff19c179"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintBottom_toTopOf="@id/nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_register"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <ex.ss.lib.base.view.ImmersiveNavigationBarHolder
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Proxy" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Theme.Main" parent="Base.Theme.Proxy">
+        <item name="android:windowBackground">@drawable/main_bg</item>
+    </style>
+
+    <style name="Theme.Splash" parent="Base.Theme.Proxy">
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+    </style>
+
+    <style name="tab_text_style">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="button_fill">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">@drawable/shape_fill_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+    </style>
+
+    <style name="button_outline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">@drawable/shape_outline_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_ff19c179</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+    </style>
+</resources>

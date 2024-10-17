@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_gradient_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="第一梯队 1-10人" />
+
+    <TextView
+        android:id="@+id/tv_gradient_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:text="目前我"
+        android:textColor="@color/color_ff19c179"
+        android:textSize="@dimen/text_size_12"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tv_gradient_title"
+        app:layout_constraintEnd_toStartOf="@id/tv_gradient_commission"
+        app:layout_constraintTop_toTopOf="@id/tv_gradient_title"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_gradient_commission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFC737"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_gradient_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_gradient_title"
+        tools:text="15%" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

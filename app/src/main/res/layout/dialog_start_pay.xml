@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_mode_bg"
+        android:paddingHorizontal="32dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_mode_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/color_363A3E"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/iv_close"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="订单-普通" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/mode_close"
+            app:layout_constraintBottom_toBottomOf="@id/tv_mode_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_mode_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_pay_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="-10dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tv_mode_title"
+            app:spanCount="2"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_start_pay" />
+
+        <EditText
+            android:id="@+id/et_pay_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_pay_input"
+            android:ellipsize="end"
+            android:hint="@string/start_pay_code"
+            android:paddingVertical="14dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="60dp"
+            android:singleLine="true"
+            android:textColor="@color/color_363A3E"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintTop_toBottomOf="@id/rv_pay_list"
+            tools:text="AAAA" />
+
+        <TextView
+            android:id="@+id/tv_code_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:text="验证"
+            android:textColor="@color/color_ff19c179"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintBottom_toBottomOf="@id/et_pay_code"
+            app:layout_constraintEnd_toEndOf="@id/et_pay_code"
+            app:layout_constraintTop_toTopOf="@id/et_pay_code" />
+
+        <TextView
+            android:id="@+id/tv_price_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="20dp"
+            android:text="价格"
+            android:textColor="#FF6A6A6A"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintStart_toStartOf="@id/et_pay_code"
+            app:layout_constraintTop_toBottomOf="@id/et_pay_code" />
+
+        <TextView
+            android:id="@+id/tv_price_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            android:textColor="#FF6A6A6A"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintBottom_toBottomOf="@id/tv_price_title"
+            app:layout_constraintEnd_toEndOf="@id/et_pay_code"
+            app:layout_constraintTop_toTopOf="@id/tv_price_title"
+            tools:text="5¥" />
+
+        <TextView
+            android:id="@+id/tv_coupon_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="优惠券"
+            android:textColor="#FF6A6A6A"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintStart_toStartOf="@id/tv_price_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_price_title" />
+
+        <TextView
+            android:id="@+id/tv_coupon_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textColor="#FF6A6A6A"
+            android:textSize="@dimen/text_size_14"
+            app:layout_constraintBottom_toBottomOf="@id/tv_coupon_title"
+            app:layout_constraintEnd_toEndOf="@id/et_pay_code"
+            app:layout_constraintTop_toTopOf="@id/tv_coupon_title"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/tv_start_pay"
+            style="@style/button_fill"
+            android:layout_height="42dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="32dp"
+            android:text="确认付款  5¥"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_coupon_title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ex.ss.lib.components.view.CardConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="#19FFFFFF"
+    app:cardCornerRadius="20dp"
+    app:contentPaddingBottom="24dp"
+    app:contentPaddingLeft="24dp"
+    app:contentPaddingRight="24dp"
+    app:contentPaddingTop="24dp">
+
+    <TextView
+        android:id="@+id/tv_ticket_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="主题："
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_ticket_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_ticket_title"
+        app:layout_constraintTop_toTopOf="@id/tv_ticket_title"
+        tools:text="5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付5¥/月付" />
+
+    <TextView
+        android:id="@+id/tv_level_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="工单级别："
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ticket_value" />
+
+    <TextView
+        android:id="@+id/tv_level_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_level_title"
+        app:layout_constraintTop_toTopOf="@id/tv_level_title"
+        tools:text="2024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:13" />
+
+    <TextView
+        android:id="@+id/tv_status_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="工单状态："
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_level_value" />
+
+    <TextView
+        android:id="@+id/tv_status_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_status_title"
+        app:layout_constraintTop_toTopOf="@id/tv_status_title"
+        tools:text="2024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:13" />
+
+    <TextView
+        android:id="@+id/tv_create_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="创建时间："
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_status_value" />
+
+    <TextView
+        android:id="@+id/tv_create_time_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_create_time_title"
+        app:layout_constraintTop_toTopOf="@id/tv_create_time_title"
+        tools:text="2024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:132024-05-04 13:19:13" />
+
+    <TextView
+        android:id="@+id/tv_replay_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="最后回复："
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_create_time_value" />
+
+    <TextView
+        android:id="@+id/tv_replay_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_replay_title"
+        app:layout_constraintTop_toTopOf="@id/tv_replay_title"
+        tools:text="234346352354234552345234346352354234552345234346352354234552345234346352354234552345234346352354234552345234346352354234552345234346352354234552345234346352354234552345" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_fill_red_button"
+        android:gravity="center"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="9dp"
+        android:text="关闭"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_check"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_replay_value" />
+
+    <TextView
+        android:id="@+id/tv_check"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/shape_fill_button"
+        android:gravity="center"
+        android:paddingVertical="9dp"
+        android:text="查看"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_cancel" />
+
+
+</ex.ss.lib.components.view.CardConstraintLayout>

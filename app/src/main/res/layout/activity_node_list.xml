@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_color_bg"
+    tools:context=".ui.main.MainActivity">
+
+    <ex.ss.lib.base.view.ImmersiveStatusBarHolder
+        android:id="@+id/imm_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:drawablePadding="24dp"
+        android:gravity="center"
+        android:text="@string/node_list_title"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:drawableStartCompat="@drawable/icon_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imm_status_bar" />
+
+    <ImageView
+        android:id="@+id/iv_test_delay"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/node_test_delay"
+        app:layout_constraintBottom_toBottomOf="@id/tv_back"
+        app:layout_constraintEnd_toStartOf="@id/iv_refresh"
+        app:layout_constraintTop_toTopOf="@id/tv_back" />
+
+    <ImageView
+        android:id="@+id/iv_refresh"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/node_refresh"
+        app:layout_constraintBottom_toBottomOf="@id/tv_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_back" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns_node_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/node_list_bg"
+        android:paddingHorizontal="28dp"
+        app:layout_constraintBottom_toTopOf="@id/nav_bar"
+        app:layout_constraintTop_toBottomOf="@id/tv_back">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_node_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_node_list_group" />
+    </androidx.core.widget.NestedScrollView>
+
+    <ex.ss.lib.base.view.ImmersiveNavigationBarHolder
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

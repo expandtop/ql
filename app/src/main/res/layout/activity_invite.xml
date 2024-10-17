@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_color_bg">
+
+    <include
+        android:id="@+id/include_title_bar"
+        layout="@layout/include_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include_title_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ex.ss.lib.components.view.CardConstraintLayout
+                android:id="@+id/layout_commission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/color_363A3E"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_my_commission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="我的佣金 0.00 ¥"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_convert_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/shape_fill_button"
+                    android:paddingHorizontal="13dp"
+                    android:paddingVertical="8dp"
+                    android:text="转入余额"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_withdraw"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_withdraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_outline_button"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="提现"
+                    android:textColor="@color/color_ff19c179"
+                    android:textSize="@dimen/text_size_12"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </ex.ss.lib.components.view.CardConstraintLayout>
+
+            <ex.ss.lib.components.view.CardConstraintLayout
+                android:id="@+id/layout_invite_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/color_363A3E"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp"
+                app:layout_constraintTop_toBottomOf="@id/layout_commission">
+
+                <ImageView
+                    android:id="@+id/iv_qr_code"
+                    android:layout_width="136dp"
+                    android:layout_height="136dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_invite_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:drawableEnd="@drawable/copy"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_ff19c179"
+                    android:textSize="@dimen/text_size_16"
+                    app:layout_constraintBottom_toTopOf="@id/tv_copy_link"
+                    app:layout_constraintEnd_toEndOf="@id/tv_copy_link"
+                    app:layout_constraintStart_toStartOf="@id/tv_copy_link"
+                    tools:text="BDKKJSBBDKKJSB" />
+
+                <TextView
+                    android:id="@+id/tv_copy_link"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_fill_button"
+                    android:gravity="center"
+                    android:paddingVertical="6dp"
+                    android:text="复制链接"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_16"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_qr_code"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_qr_code" />
+
+                <TextView
+                    android:id="@+id/tv_invite_rule"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_copy_link"
+                    tools:text="成功邀请一人注册后算一个有效名额" />
+
+            </ex.ss.lib.components.view.CardConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_invite_commission"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/invite_commission_bg"
+                android:elevation="20dp"
+                android:paddingVertical="12dp"
+                app:layout_constraintEnd_toStartOf="@id/layout_invite_get_commission"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="@id/layout_invite_info"
+                app:layout_constraintTop_toBottomOf="@id/layout_invite_info">
+
+                <TextView
+                    android:id="@+id/tv_invite_commission_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/invite_commission"
+                    android:drawablePadding="8dp"
+                    android:text="确认中的佣金"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_invite_commission_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_invite_commission_title"
+                    tools:text="0.00 ¥" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_invite_get_commission"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/invite_get_commission_bg"
+                android:elevation="20dp"
+                android:paddingVertical="12dp"
+                app:layout_constraintEnd_toEndOf="@id/layout_invite_info"
+                app:layout_constraintStart_toEndOf="@id/layout_invite_commission"
+                app:layout_constraintTop_toBottomOf="@id/layout_invite_info">
+
+                <TextView
+                    android:id="@+id/tv_invite_get_commission_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/invite_get_commission"
+                    android:drawablePadding="8dp"
+                    android:text="累计获得佣金"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_invite_get_commission_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_invite_get_commission_title"
+                    tools:text="0.00 ¥" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ex.ss.lib.components.view.CardConstraintLayout
+                android:id="@+id/layout_invite_gradient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/color_363A3E"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp"
+                app:contentPaddingBottom="24dp"
+                app:contentPaddingLeft="24dp"
+                app:contentPaddingRight="24dp"
+                app:contentPaddingTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/layout_invite_commission">
+
+                <TextView
+                    android:id="@+id/tv_invite_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="目前邀请：5人"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_gradient_commission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="返佣比例"
+                    android:textColor="#FFC737"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_gradient_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_invite_number" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_invite_gradient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_invite_number"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_invite_gradient_list" />
+
+            </ex.ss.lib.components.view.CardConstraintLayout>
+
+            <ex.ss.lib.components.view.CardConstraintLayout
+                android:id="@+id/layout_invite_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/color_363A3E"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp"
+                app:contentPaddingBottom="24dp"
+                app:contentPaddingLeft="20dp"
+                app:contentPaddingRight="20dp"
+                app:contentPaddingTop="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_invite_gradient">
+
+                <TextView
+                    android:id="@+id/tv_invite_record_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/home_website_icon"
+                    android:text="我的邀请记录"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14" />
+
+            </ex.ss.lib.components.view.CardConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ex.ss.lib.base.view.ImmersiveNavigationBarHolder
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
